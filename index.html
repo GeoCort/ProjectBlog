@@ -3,21 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/725392aa44.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/src/style.css">
     <title>Blog V1</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="">Home</a>
-            <a href="">Blog</a>
-            <a href="">About</a>
-        </nav>
+    <header class="header-container">
+        <div class="">
+            <i class="fa-solid fa-square-rss size"></i>
+        </div>
+        <div class="header-center">
+            <h1>The Republic</h1>
+            <nav class="links-large" id="mainMenu">
+                <a href="">Home</a>
+                <a href="">Blog</a>
+                <a href="">About</a>
+            </nav>
+        </div>
+        <div class="mobile-container">
+            <i class="fa-solid fa-bars hamburger" id="homePageMenuBtn"></i>
+            <nav class="link-container none" id="mobileMenu">
+                <a href="">Home</a>
+                <a href="">Blog</a>
+                <a href="">About</a>
+            </nav>
+        </div>
     </header>
     <main>
         
         <section class="grid container">
-            <div class="green sidebar"> Sidebar 1</div>
             <div class="mainContent">
                 <article class="blogPostContainer">
                     <div class="img-container">
@@ -36,5 +50,6 @@
             <div class="red sidebar"> Sidebar 2</div>
         </section>
     </main>
+    <script src="./public/scripts/home.js"></script>
 </body>
 </html>
