@@ -16,6 +16,9 @@
     --marginBody:4rem;
     --marginMobile:2rem;
     --marginSide:2rem;
+    --medium-link:.8em;
+    --medium-title:2em;
+    --medium-subTitle:1.5em;
 }
 body{
     background-color: var(--lightShadeBrown);
@@ -50,8 +53,11 @@ a:hover{
     text-align: center;
 }
 h1{
-    padding-bottom: 1rem;
+
     padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom:1px solid black;
+    margin-bottom: 2rem;
 }
 .links-large{
     display: flex;
@@ -81,8 +87,9 @@ h1{
     grid-template-columns:4fr 1fr;
 }
 .sidebar{
-    max-width: 300px;
-    margin: var(--marginSide);
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
 }
 .green{
     background-color: green;
@@ -114,15 +121,64 @@ h1{
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-
+    max-height: 80vh;
 }
 .none{
     display: none;
 }
 .hamburger{
     cursor:pointer;
+    display: none;
 }
+.bar{
+    display: block;
+    width:100%;
+    height: 2px;
+    margin:1rem 0 1rem 0;
+    background-color: #221f1e;
+}
+/* sidebar */
+.sidebar-container{
+    width: 100%;
+    text-align: center;
+    border:1px solid black;
+    padding:1rem;
+}
+.sidebarTitle{
+    font-size: 1em;
+    font-weight: 800;
+}
+.sidebarSubTitle{
+    font-size: .9em;
+    font-style: italic;
+}
+.sidebarContent{
+    font-weight: 500;
+}
+@media (max-width:1200px){
+    .container{
+        grid-template-columns: 1fr;
+    }
+    .header-center{
+        font-size: var(--medium-link)
+    }
+    .sidebar{
+        display: none;
+        width: 0;
+    }
+    .title{
+        font-size: var(--medium-title);
+    }
+    .subTitle{
+        font-size: var(--medium-subTitle);
+    }
+
+}
+
 @media (max-width:720px){
+    .hamburger{
+        display: inline ;
+    }
     main{
         margin:var(--marginMobile)
     }
