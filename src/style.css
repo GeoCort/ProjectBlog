@@ -10,8 +10,8 @@
 
     --lightShadeBrown:#fdf8f6;
     --offsetShadeBrown:#f4e3dd;
-    --darkerOffsetShadeBrown:#B09A99;
-    --darkerShadeBrown:#B09A99;
+    --darkerOffsetShadeBrown:#f6eae0;
+    --darkerShadeBrown:#efe2cf;
     --darkShadeBrown:#221f1e;
     --marginBody:4rem;
     --marginMobile:2rem;
@@ -28,7 +28,7 @@ main{
 }
 a:hover{
     background-color:var(--darkerOffsetShadeBrown);
-    color:var(--lightShadeBrown);
+    color:var(--darkShadeBrown);
 }
 /* logo */
 .size{
@@ -89,6 +89,7 @@ h1{
 .sidebar{
     display: flex;
     flex-direction: column;
+    background-color: aqua;
     gap:1rem;
 }
 .green{
@@ -106,13 +107,15 @@ h1{
 }
 .blogPostContainer > p{
     font-size:1.5em;
-    line-height: 1.25;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
 }
 .title{
-    font-size: 3em;
+    font-size: 2.5em;
 }
 .subTitle{
-    font-size:2em;
+    font-size:1.8em;
     font-style: italic;
     margin-block-start: 1rem;
 }
@@ -138,10 +141,16 @@ h1{
     background-color: #221f1e;
 }
 /* sidebar */
+
+.sidebar{
+    border-left:1px solid black;
+    padding:1rem;
+    
+}
 .sidebar-container{
-    width: 100%;
     text-align: center;
-    border:1px solid black;
+    background-color: var(--darkerOffsetShadeBrown);
+    border-radius: 1rem;
     padding:1rem;
 }
 .sidebarTitle{
@@ -219,18 +228,19 @@ h1{
     }
     .blogPostContainer > p,span {
         text-align: start;
+        font-size: 1.1em;
     }
     .title{
-        font-size: 2em;
+        font-size: 1.8em;
     }
     .subTitle{
-        font-size: 1.5em;
+        font-size: 1.15em;
 
     }
     .img{
         border-radius: 10px;
     }
-    .header-center{
+    .header-center >nav{
         display: none;
     }
     
