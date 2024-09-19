@@ -10,8 +10,8 @@
 
     --lightShadeBrown:#fdf8f6;
     --offsetShadeBrown:#f4e3dd;
-    --darkerOffsetShadeBrown:#f6eae0;
-    --darkerShadeBrown:#efe2cf;
+    --darkerOffsetShadeBrown:#f9f1e9;
+    --darkerShadeBrown:#f1ebe9;
     --darkShadeBrown:#221f1e;
     --marginBody:4rem;
     --marginMobile:2rem;
@@ -85,11 +85,11 @@ h1{
 .grid{
     display: grid;
     grid-template-columns:4fr 1fr;
+    gap:2rem;
 }
 .sidebar{
     display: flex;
     flex-direction: column;
-    background-color: aqua;
     gap:1rem;
 }
 .green{
@@ -99,25 +99,21 @@ h1{
     background-color: red;
 }
 .mainContent{
-    height:100svh;
+    min-height:100svh;
 }
 /* article CSS */
-.blogPostContainer{
-    padding:1.5rem;
-}
 .blogPostContainer > p{
     font-size:1.5em;
     line-height: 1.7em;
-    padding-top: 1rem;
     padding-bottom: .5rem;
 }
 .title{
-    font-size: 2.5em;
+    font-size: 3em;
 }
 .subTitle{
     font-size:1.8em;
     font-style: italic;
-    margin-block-start: 1rem;
+    margin: 2rem;
 }
 /* image article */
 .img{
@@ -152,17 +148,18 @@ h1{
     background-color: var(--darkerOffsetShadeBrown);
     border-radius: 1rem;
     padding:1rem;
+    max-width: 300px;
 }
 .sidebarTitle{
-    font-size: 1em;
+    font-size: 1.4em;
     font-weight: 800;
-}
-.sidebarSubTitle{
-    font-size: .9em;
-    font-style: italic;
 }
 .sidebarContent{
     font-weight: 500;
+    font-size:1.1em;
+}
+.sideImg{
+    object-fit: cover;
 }
 @media (max-width:1200px){
     .container{
@@ -201,7 +198,7 @@ h1{
         flex-direction: column;
         gap: 0.8em;
         right:5%;
-        top:60px;
+        top:100px;
         font-size: 1em;  
         background-color:var(--darkerShadeBrown);
         width: 100px;  
